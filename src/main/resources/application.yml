@@ -1,6 +1,10 @@
 
 spring:
-  datasource:
-    url: "jdbc:postgresql://localhost:15432/location"
-    username: postgresql
-    password: "####"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
