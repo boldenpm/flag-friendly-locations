@@ -1,5 +1,9 @@
 
 spring:
+  datasource:
+    url: "jdbc:postgresql://${HOST}:${PORT}/location"
+    username: ${USERNAME}
+    password: ${PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -8,3 +12,6 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQL81Dialect
+  flyway:
+    enabled: true
+    validate-on-migrate: true
